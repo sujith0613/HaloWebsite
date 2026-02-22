@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team HALO — Humanitarian Aerial Logistics & Operations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+<body>
+
+    <!-- BOOT SCREEN -->
+    <div id="boot">
+        <div class="boot-wrap">
+            <div class="boot-logo">⬡ TEAM HALO // SYSTEM INIT</div>
+            <div class="boot-term" id="boot-term"></div>
+            <div class="boot-bar-outer"><div class="boot-bar-fill" id="boot-fill"></div></div>
+            <div class="boot-pct" id="boot-pct">0%</div>
+        </div>
+    </div>
+
+    <!-- CURSOR -->
+    <div id="cur"></div>
+
+    <!-- BG CANVAS -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-brand">
+            <div class="nav-halo-icon">
+                <img src="./images/halo_favicon.png" alt="Team HALO Logo" />
+            </div>
+            <div>
+                <div class="nav-brand-text">TEAM HALO</div>
+                <span class="nav-brand-sub">Humanitarian Aerial Logistics &amp; Operations</span>
+            </div>
+        </div>
+        <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="team.html">THE TEAM</a></li>
+            <li><a href="basedrone.html">BASE DRONE</a></li>
+            <li><a href="scout.html">SCOUT MODULE</a></li>
+            <li><a href="delivery.html">DELIVERY MODULE</a></li>
+        </ul>
+    </nav>
+
+    <!-- HUD -->
+    <div id="hud">
+        <span class="hud-lbl">MISSION PROGRESS</span>
+        <div class="hud-prog-wrap"><div class="hud-prog-fill" id="hud-fill"></div></div>
+        <span class="hud-score" id="hud-score">SCORE: 0</span>
+        <span class="hud-mission" id="hud-mission">▶ DISASTER MGMT MISSION</span>
+    </div>
+
+    <!-- HERO + WHO SECTIONS (share background wrap) -->
+    <div id="hero-bg-wrap">
+
+        <!-- HERO -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="hero-team-name sr sr-up" style="--d:.2s">TEAM<br><span>HALO</span></h1>
+                <p class="hero-full-name sr sr-up" style="--d:.3s">Humanitarian Aerial Logistics &amp; Operations</p>
+                <p class="hero-tagline sr sr-up" style="--d:.35s">BUILD · FLY · RESCUE</p>
+                <div class="hero-drone-wrap sr sr-pop" style="--d:.45s">
+                    <img src="./images/airbus.png" alt="Team HALO Drone" />
+                </div>
+                <div class="hero-cta-row sr sr-up" style="--d:.5s">
+                    <a href="#who" class="px-btn primary">▶ OUR MISSION</a>
+                    <a href="https://www.nidar.org.in" target="_blank" rel="noopener" class="px-btn secondary">NIDAR 2025 ↗</a>
+                </div>
+                <p class="scroll-hint sr sr-up" style="--d:.65s">↓ SCROLL FOR BRIEFING ↓</p>
+            </div>
+        </section>
+
+        <!-- WHO WE ARE -->
+        <section id="who">
+            <div class="who-grid">
+
+                <!-- Left: Text -->
+                <div class="who-left">
+                    <div class="section-eyebrow sr sr-up" style="--d:0s">// MISSION BRIEFING</div>
+                    <h2 class="section-heading sr sr-up" style="--d:.05s">WHO ARE WE?</h2>
+                    <p class="who-intro-big sr sr-up" style="--d:.1s">
+                        Team HALO is an <strong>ambition-driven student team</strong> using drones to make an impact.
+                    </p>
+                    <div class="who-body">
+                        <p class="sr sr-up" style="--d:.15s">
+                            Consisting of students with experience competing at the highest level across all sorts
+                            of robotics competitions, this team was formed with a single aim — winning one of
+                            India's biggest drone events,
+                            <a href="https://www.nidar.org.in" target="_blank" rel="noopener"><strong>NIDAR 2025</strong></a>,
+                            organised by <strong>The Drone Federation of India (DFI)</strong> and
+                            <strong>The Ministry of Electronics and Information Technology (MeitY)</strong>.
+                        </p>
+                        <p class="sr sr-up" style="--d:.2s">
+                            Team HALO is competing in the
+                            <a href="https://www.nidar.org.in/missions" target="_blank" rel="noopener"><strong>Disaster Management Mission</strong></a>,
+                            focused on identifying trapped survivors and delivering critical aid in a simulated
+                            flood environment — where every second and every metre of precision counts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Mission Card -->
+                <div class="who-right sr sr-right" style="--d:.1s">
+                    <div class="mission-card-outer">
+                        <div class="mission-card">
+                            <div class="mc-header">
+                                <div class="mc-icon">🛸</div>
+                                <div class="mc-title">ACTIVE MISSION<br>NIDAR 2025</div>
+                            </div>
+                            <div class="mc-row"><span class="mc-label">COMPETITION</span><span class="mc-val blue">NIDAR 2025</span></div>
+                            <div class="mc-row"><span class="mc-label">ORGANISERS</span><span class="mc-val" style="font-size:clamp(13px,1.8vw,17px)">DFI &amp; MeitY</span></div>
+                            <div class="mc-row"><span class="mc-label">MISSION TYPE</span><span class="mc-val cyan">DISASTER MANAGEMENT</span></div>
+                            <div class="mc-row"><span class="mc-label">ENVIRONMENT</span><span class="mc-val gold">SIMULATED FLOOD ZONE</span></div>
+                            <div class="mc-row"><span class="mc-label">OBJECTIVES</span><span class="mc-val" style="font-size:clamp(13px,1.8vw,17px)">SURVIVOR ID + AID DELIVERY</span></div>
+                            <div style="padding-top:16px;border-top:1px solid rgba(26,95,212,.15);margin-top:8px">
+                                <div style="font-family:var(--px);font-size:clamp(6px,1vw,7px);color:#1b3a6b;letter-spacing:2px;margin-bottom:12px">SCORING CRITERIA</div>
+                                <div class="scoring-grid">
+                                    <div class="score-item"><div class="si-icon">👁️</div><div class="si-label">SURVIVORS ID</div><div class="si-desc">Per survivor found</div></div>
+                                    <div class="score-item"><div class="si-icon">📦</div><div class="si-label">PACKAGES DELIVERED</div><div class="si-desc">Count of drops</div></div>
+                                    <div class="score-item"><div class="si-icon">🎯</div><div class="si-label">DROP ACCURACY</div><div class="si-desc">Distance from target</div></div>
+                                    <div class="score-item"><div class="si-icon">⏱️</div><div class="si-label">TIME</div><div class="si-desc">Total mission time</div></div>
+                                </div>
+                            </div>
+                            <div class="mc-status-row">
+                                <div class="mc-status-dot"></div>
+                                <span class="mc-status-text">MISSION STATUS: ACTIVE — PREPARATIONS UNDERWAY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Logos -->
+            <div class="logos-section sr sr-up" style="--d:.05s">
+                <div class="logos-eyebrow">COMPETITION ORGANISED BY</div>
+                <div class="logos-row">
+                    <div class="logo-card">
+                        <img src="./images/dfi-logo.svg" alt="DFI — Drone Federation of India"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="logo-fallback" style="display:none"><span style="font-size:28px">🛸</span>DRONE FEDERATION<span>of India — DFI</span></div>
+                    </div>
+                    <div class="logo-card">
+                        <img src="./images/nidar.png" alt="NIDAR 2025"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="logo-fallback" style="display:none"><span style="font-size:28px">🏆</span>NIDAR 2025<span>National Drone Championship</span></div>
+                    </div>
+                    <div class="logo-card">
+                        <img src="./images/meity.png" alt="MeitY — Ministry of Electronics and IT"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="logo-fallback" style="display:none"><span style="font-size:28px">🏛️</span>MeitY<span>Govt. of India</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- end #hero-bg-wrap -->
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-inner">
+            <div class="contact-top">
+                <div class="contact-left sr sr-left" style="--d:0s">
+                    <div class="section-eyebrow" style="justify-content:flex-start">// COMMS</div>
+                    <h2 class="section-heading" style="margin-bottom:8px">CONTACT US</h2>
+                    <p class="contact-tagline">Always on the lookout for new opportunities and partnerships. Reach out any time — we are available 24 × 7.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card sr sr-up" style="--d:.05s">
+                        <div class="cc-icon"><i class="fa-solid fa-house"></i></div>
+                        <div class="cc-title">MAILING ADDRESS</div>
+                        <div class="cc-body">Team HALO<br>SSN College of Engineering<br>Rajiv Gandhi Salai, OMR<br>Kalavakkam, Chennai — 603 103</div>
+                    </div>
+                    <div class="contact-card sr sr-up" style="--d:.1s">
+                        <div class="cc-icon "><i class="fa-solid fa-comment"></i></div>
+                        <div class="cc-title">SOCIAL CHANNELS</div>
+                        <div class="cc-body">
+                            <strong style="color:var(--white)">Instagram</strong><br>
+                            <a href="https://www.instagram.com/team_halo_uavs?igsh=MTQ4aGxjbDdoazN3ZQ==" target="_blank" rel="noopener">@team_halo_uavs</a><br><br>
+                            <strong style="color:var(--white)">LinkedIn</strong><br>
+                            <a href="https://www.linkedin.com/in/team-halo" target="_blank" rel="noopener">linkedin.com/in/team-halo</a>
+                        </div>
+                    </div>
+                    <div class="contact-card sr sr-up" style="--d:.15s">
+                        <div class="cc-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="cc-title">PHONE &amp; EMAIL</div>
+                        <div class="cc-body">
+                            <a href="mailto:teamhalouavs@gmail.com">teamhalouavs@gmail.com</a><br><br>+91 93919 39723
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar sr sr-up" style="--d:.1s">
+                <div class="footer-logo">⬡ TEAM <span>HALO</span></div>
+                <div class="footer-copy">© Team HALO · SSN College of Engineering · Design adapted from <a href="http://html5up.net" style="color:rgba(160,200,255,.3)">HTML5 UP</a></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
